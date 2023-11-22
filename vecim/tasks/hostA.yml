@@ -2,6 +2,3 @@
   ansible.builtin.shell: "echo {{debian_message}} > /tmp/readme.txt"
   args:
     executable: /bin/sh
-
-- name: Copy the files of repo to target system
-  
