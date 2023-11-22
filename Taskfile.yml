@@ -1,0 +1,10 @@
+version: 3
+tasks:
+  apply:
+    cmds:
+      - ansible-playbook ./playbook.yml -i ./inventory.yml --extra-vars "{{.extra}}"
+    desc: "Раскатить роль с типичным плейбуком по хостам"
+  fact:
+    cmds:
+      - ansible all -m setup -a filter={{.filter}} -i ./inventory.yml
+    desc: "Получить информацию о переменных, что были собраны ansible"

@@ -1,0 +1,7 @@
+- name: "Run tasks for host A"
+  import_tasks: hostA.yml
+  when: ansible_facts['os_family']|lower == 'debian'
+
+- name: "Run tasks for host B"
+  import_tasks: hostB.yml
+  when: ansible_facts['os_family']|lower == 'archlinux'

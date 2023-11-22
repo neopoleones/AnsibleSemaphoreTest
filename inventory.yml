@@ -1,0 +1,7 @@
+teststand:
+  hosts:
+    127.0.0.1:
+      ansible_user: cha2ned
+
+    192.168.56.103:
+      ansible_user: vlados

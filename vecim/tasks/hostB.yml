@@ -1,0 +1,4 @@
+- name: Echo to tmp (arch variation)
+  ansible.builtin.shell: "echo {{arch_message}}> /tmp/test.txt"
+  args:
+    executable: /bin/sh
